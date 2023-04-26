@@ -43,3 +43,27 @@ just clone the repo or save grecaptcha.py and put it in a folder with ur project
         app = web.application(urls, globals())
         app.run()
 
+# Web.py index template
+
+    $def with (content=None)
+
+    <!doctype html>
+    <html>
+        <head>
+            <title>testing</title>
+            <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+             <script>
+               function onSubmit(token) {
+                 document.getElementById("demo-form").submit();
+               }
+             </script>
+        </head>
+
+        <body>
+            <form id="demo-form" action="/" method="POST">
+              <button class="g-recaptcha" data-sitekey="6LfihLklAAAAAPpK7MGkiYI4iIhA-2WuUlfWWNrV" data-callback="onSubmit">Submit</button>
+              <br/>
+            </form>
+            <p>$content</p>
+        </body>
+    </html>
