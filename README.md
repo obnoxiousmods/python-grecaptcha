@@ -1,8 +1,13 @@
 # python-grecaptcha
 google recaptcha library for recaptcha v2 invisible, probably works with v2/v3 normal as well aslong as you know how to do the frontend
 
+#Installation
 
-"""
+just clone the repo or save grecaptcha.py and put it in a folder with ur project :)
+
+
+# Web.py example
+
 import web
 import time
 import requests
@@ -13,7 +18,7 @@ urls = (
 )
 
 web.config.debug = True
-# Excplicitly set version 2
+
 templates = web.template.render('templates/')
 app = web.application(urls, globals())
 recaptcha = Grecaptcha(secretkey="6LfihLklAAAAAI1X3swQMRNJLAt0BAvk-sMhTp9c",
