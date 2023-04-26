@@ -1,7 +1,7 @@
 # python-grecaptcha
 google recaptcha library for recaptcha v2 invisible, probably works with v2/v3 normal as well aslong as you know how to do the frontend
 
-#Installation
+# Installation
 
 just clone the repo or save grecaptcha.py and put it in a folder with ur project :)
 
