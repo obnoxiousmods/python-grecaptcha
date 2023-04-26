@@ -8,26 +8,26 @@ just clone the repo or save grecaptcha.py and put it in a folder with ur project
 
 # Web.py example
 
-import web
-import time
-import requests
-from grecaptcha import Grecaptcha
+    import web
+    import time
+    import requests
+    from grecaptcha import Grecaptcha
 
-urls = (
-    '/', 'home'
-)
+    urls = (
+        '/', 'home'
+    )
 
-web.config.debug = True
+    web.config.debug = True
 
-templates = web.template.render('templates/')
-app = web.application(urls, globals())
-recaptcha = Grecaptcha(secretkey="6LfihLklAAAAAI1X3swQMRNJLAt0BAvk-sMhTp9c",
-                       sitekey="6LfihLklAAAAAPpK7MGkiYI4iIhA-2WuUlfWWNrV")
+    templates = web.template.render('templates/')
+    app = web.application(urls, globals())
+    recaptcha = Grecaptcha(secretkey="6LfihLklAAAAAI1X3swQMRNJLAt0BAvk-sMhTp9c",
+                           sitekey="6LfihLklAAAAAPpK7MGkiYI4iIhA-2WuUlfWWNrV")
 
 
-class home:
-    def GET(self):
-        return templates.index()
+    class home:
+        def GET(self):
+            return templates.index()
 
     def POST(self):
         data = web.input()
@@ -39,7 +39,7 @@ class home:
             return "Failure"
 
 
-if __name__ == "__main__":
-    app = web.application(urls, globals())
-    app.run()
-"""
+    if __name__ == "__main__":
+        app = web.application(urls, globals())
+        app.run()
+
